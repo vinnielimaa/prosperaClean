@@ -24,6 +24,74 @@
   </head>
   <body>
     <!-- ========== HEADER / NAV ========== -->
+    <!-- LOADING SCREEN -->
+    <div
+      id="loader"
+      style="
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: #020d1a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        transition: opacity 0.4s ease;
+      "
+    >
+      <div style="text-align: center">
+        <div
+          style="
+            font-family: sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 2px;
+          "
+        >
+          PROS<span style="color: #00d4ff">∞</span>PERA
+        </div>
+        <div
+          style="
+            font-size: 0.6rem;
+            letter-spacing: 4px;
+            color: #00d4ff;
+            margin-top: 4px;
+          "
+        >
+          CLEAN CARE
+        </div>
+      </div>
+      <div style="display: flex; gap: 8px">
+        <div class="ld"></div>
+        <div class="ld" style="animation-delay: 0.2s"></div>
+        <div class="ld" style="animation-delay: 0.4s"></div>
+      </div>
+    </div>
+
+    <style>
+      .ld {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #00d4ff;
+        animation: ld 1.2s ease-in-out infinite;
+      }
+      @keyframes ld {
+        0%,
+        60%,
+        100% {
+          transform: scale(1);
+          opacity: 0.4;
+        }
+        30% {
+          transform: scale(1.4);
+          opacity: 1;
+        }
+      }
+    </style>
+
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo">
